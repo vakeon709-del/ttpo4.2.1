@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой проект в Replit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+        }
+        h1 {
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .card {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        button {
+            background: #ffd700;
+            color: #333;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Привет из Replit!</h1>
+    <p>Этот проект был создан через Replit и синхронизирован с GitHub</p>
+
+    <div class="card">
+        <h2>О проекте</h2>
+        <p>Я учусь работать с Git, GitHub и Replit</p>
+        <ul>
+            <li>✅ Git</li>
+            <li>✅ GitHub</li>
+            <li>✅ Replit</li>
+        </ul>
+    </div>
+
+    <button onclick="showMessage()">Нажми меня!</button>
+    <div id="message"></div>
+
+    <script>
+        function showMessage() {
+            const messages = [
+                '🎉 Отлично! Ты нажимаешь на кнопку!',
+                '⭐ Git — это круто!',
+                '🚀 Ты молодец, что учишься!',
+                '💻 Программирование — это весело!',
+                '🌟 Replit + GitHub = мощная связка!'
+            ];
+            const random = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('message').textContent = random;
+            document.getElementById('message').style.fontSize = '24px';
+        }
+    </script>
+</body>
+</html>
